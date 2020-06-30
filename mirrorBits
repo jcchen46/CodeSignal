@@ -1,0 +1,10 @@
+int mirrorBits(int a) {
+    int t = 0;
+    while (a != 0) {
+        cout << a << " " << t <<endl;        
+        t = 2 * t + a%2;
+        a/=2;
+    }
+    cout << a << " " << t <<endl;
+    return t;
+}
