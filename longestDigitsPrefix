@@ -1,0 +1,15 @@
+string o,longestDigitsPrefix(string s) {
+    /*for(char const &c : s){
+        if(isdigit(c))  o.push_back(c);
+    }*/
+    //for_each(s.begin(), s.end(), f);
+    int i = 0;
+    while(i< size(s)){
+        if(isdigit(s[i])){
+            o.push_back(s[i]);
+            i++;
+        }else{
+            return o;    
+        }
+    }
+}
