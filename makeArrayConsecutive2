@@ -1,0 +1,6 @@
+int makeArrayConsecutive2(std::vector<int> statues) {
+    int min = *min_element(statues.begin(),statues.end());
+    int max = *max_element(statues.begin(),statues.end());
+    int cha = max-min +1;
+    return cha - statues.size();
+}
