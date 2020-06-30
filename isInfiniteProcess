@@ -1,0 +1,8 @@
+bool isInfiniteProcess(int a, int b) {
+    //a++   b--
+    int o  = (abs(b-a))%2;
+    cout << o << endl;
+    if(o != 0 || a > b)  return 1;
+    else return 0;
+    
+}
