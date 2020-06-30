@@ -1,0 +1,9 @@
+bool checkPalindrome(std::string inputString) {
+    string rev = inputString;
+    reverse(rev.begin(),rev.end());
+    if(rev == inputString){
+        return true;
+    }else{
+        return false;
+    }
+}
