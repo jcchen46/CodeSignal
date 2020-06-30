@@ -1,0 +1,18 @@
+bool isMAC48Address(string s) {
+    if(s.size() != 17)    return 0;
+    
+    string t = "0123456789ABCDEF";
+    for(int i = 0; i < s.size();i++){
+        if(t.find(s[i]) != string::npos){
+            cout << "0";
+        }else if((i+1)%3 == 0 && s[i] == '-'){
+            cout << "3";
+        }else{
+            cout << "1";
+            return 0;
+        }
+    }
+    cout << endl;
+
+    return 1;
+}
