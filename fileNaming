@@ -1,0 +1,12 @@
+vector<string> ans, fileNaming(vector<string> names) {
+    set<string> mp;
+    for(string s:names){
+        int t = 0;
+        string ss = s;
+        while(mp.find(ss)!=mp.end())
+            ss = s +"("+to_string(++t)+")";
+        mp.insert(ss);
+        ans.push_back(ss);
+    }
+    return ans;
+}
