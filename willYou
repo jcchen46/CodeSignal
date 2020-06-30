@@ -1,0 +1,3 @@
+bool willYou(bool y, bool b, bool l) {
+    return !((y && b) == l);   
+}
