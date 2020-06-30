@@ -1,0 +1,7 @@
+int i=0,depositProfit(double d, double r, double t) {
+    while(d<t){
+        d+=d*r/100;
+        i++;
+    }
+    return i;
+}
