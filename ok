@@ -1,0 +1,15 @@
+bool ok(int a, int b) {
+    int s = 0, x = b;
+    while(x)
+        s += x % 10, x /= 10;
+    return b - s <= a && a <= b + s;
+}
+
+int comfortableNumbers(int l, int r) {
+    int sol;
+    for(int i = l; i <= r; i++)
+        for(int j = i + 1; j <= r; j++)
+            if(ok(i, j) && ok(j, i))
+                sol++;
+    return sol;
+}
