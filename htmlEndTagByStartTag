@@ -1,0 +1,4 @@
+string htmlEndTagByStartTag(string s) {
+    s = s.substr(1);
+    return (s.find(" ") == string::npos)? ("</" + s):("</" + s.substr(0,s.find_first_of(" ")) + ">");
+}
