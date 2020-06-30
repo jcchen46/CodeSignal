@@ -1,0 +1,6 @@
+int electionsWinners(vector<int> v, int k) {
+    int o = 0, x = *max_element(v.begin(),v.end());
+    for(int i = 0; i < v.size(); i++)   if(v[i] + k > x)    o++;
+    if(k == 0)  count(v.begin(),v.end(),x) == 1?o=1:o=0;
+    return o;
+}
