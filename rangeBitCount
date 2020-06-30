@@ -1,0 +1,6 @@
+int o = 0, rangeBitCount(int a, int b) {
+    for(int i = a; i <= b; ++i){
+        o += __builtin_popcount(i);
+    }
+    return o;
+}
