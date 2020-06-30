@@ -1,0 +1,10 @@
+int minimalNumberOfCoins(vector<int> c, int p) {
+    int o = 0;
+    for(int i = c.size() - 1; i >=0; --i){
+        while(p-c[i] >= 0){
+            p -= c[i];
+            o++;
+        }
+    }
+    return o;
+}
