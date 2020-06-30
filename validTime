@@ -1,0 +1,5 @@
+bool validTime(string t) {
+    if(t[0]%48 > 2 || t[3]%48 >= 6)  return 0;  // check if time exceded limit
+    if(t[0]%48 == 2 && t[1]%48 >= 4)  return 0;  // check if hour is less than 24
+    return 1;
+}
