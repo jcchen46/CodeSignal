@@ -1,0 +1,13 @@
+string messageFromBinaryCode(string s) {
+    string o = "";
+    stringstream so(s);
+    while(so.good()){
+        bitset<8> b;
+        so >> b;
+        char p = char(b.to_ulong());
+        cout << p << endl;
+        o += p;
+    }
+    o.pop_back();
+    return o;
+}
