@@ -1,0 +1,9 @@
+string buildPalindrome(string st) {
+    
+    string ret(st);
+    auto it = st.begin();
+    while (ret != string(ret.rbegin(), ret.rend())) {
+        ret.insert(st.size(), 1, *it++);
+    }
+    return ret;
+}
