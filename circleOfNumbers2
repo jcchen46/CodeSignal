@@ -1,0 +1,5 @@
+int circleOfNumbers(int n, int fn) {
+    if(n/2 > fn)        return fn + n/2;
+    else if(n/2 < fn)   return fn - n/2;
+    else return 0;
+}
