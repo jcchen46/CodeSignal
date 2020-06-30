@@ -1,0 +1,4 @@
+std::string reflectString(string s) {
+    for(int i = 0; i < s.size(); i++)    s[i]  = 110 - ((int)s[i] - 109);
+    return s;
+}
