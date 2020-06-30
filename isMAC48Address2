@@ -1,0 +1,9 @@
+bool isMAC48Address(string s) {
+    string t = "ABCDEF0123456789";
+    if(s.size() != 17)  return 0;
+    for(int i = 0; i < 17; i++){
+        if((i+1)%3 == 0){   if(s[i] != '-')                 return 0;}
+        else                if(t.find(s[i]) == string::npos) return 0;
+    }
+    return 1;
+}
