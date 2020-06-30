@@ -1,0 +1,8 @@
+vector<int> houseOfCats(int l) {
+    vector<int> o;
+    for(int i = l; i >= 0 ; i-=4){
+        o.push_back(i/2);
+    }
+    sort(o.begin(),o.end());
+    return o;
+}
