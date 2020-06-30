@@ -1,0 +1,24 @@
+int sumUpNumbers(string s) {
+    stringstream ss;
+    
+    for(int i = 0; i < s.size(); i++){
+        if(!isdigit(s[i]))  s[i] = ' ';
+    }
+    
+    ss << s;
+    
+    string t;
+    int f,sum=0;
+    while(!ss.eof()){
+        //take word
+        ss >> t;
+        
+        //check if number
+        if(stringstream(t) >> f){
+            cout << f << endl;
+            sum = sum + f;
+        }
+        t = "";
+    }
+    return sum;
+}
