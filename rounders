@@ -1,0 +1,7 @@
+int rounders(int v) {
+    int y = 1;
+    for (; v > 10; y *= 10)
+        v = (v + 5) / 10;
+    return v * y;
+    
+}
