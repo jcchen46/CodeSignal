@@ -1,0 +1,10 @@
+int differentSquares(std::vector<std::vector<int>> m) {
+    set<vector<int>> st;
+    for(int i=0;i<m.size()-1;i++){
+        for(int j=0;j<m[i].size()-1;j++){
+            vector<int> v = {m[i][j],m[i][j+1],m[i+1][j],m[i+1][j+1]};
+            st.insert(v);
+        }
+    }
+    return st.size();
+}
