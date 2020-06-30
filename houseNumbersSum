@@ -1,0 +1,8 @@
+int houseNumbersSum(vector<int> v) {
+    int i = 0,o = 0;
+    for(;i<v.size();i++){
+        if(v[i] != 0)   o+= v[i];
+        else    break;
+    }
+    return o;
+}
