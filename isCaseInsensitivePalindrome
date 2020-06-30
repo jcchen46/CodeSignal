@@ -1,0 +1,6 @@
+bool isCaseInsensitivePalindrome(string s) {
+    for(int i = 0; i < s.size(); i++){
+        if(tolower(s[i]) != tolower(s[s.size()-1-i])) return 0;
+    }
+    return 1;
+}
