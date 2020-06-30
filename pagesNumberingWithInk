@@ -1,0 +1,6 @@
+int pagesNumberingWithInk(int c, int d) {
+    for (; d >= 0;) {
+        d -= (int)log10(c++) + 1;
+    }
+    return c - 2;
+}
