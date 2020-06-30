@@ -1,0 +1,7 @@
+vector<int> replaceMiddle(vector<int> v) {
+    if(v.size()%2 == 0){
+        v[v.size()/2 - 1] = v[v.size()/2 - 1] + v[v.size()/2];
+        v.erase(v.begin() + v.size()/2);
+    }
+    return v;
+}
