@@ -1,0 +1,4 @@
+std::string characterParity(char c) {
+    if(isdigit(c))  return c%2==0?"even":"odd";
+    else return "not a digit";
+}
