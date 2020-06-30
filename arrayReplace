@@ -1,0 +1,5 @@
+vector<int> arrayReplace(vector<int> i, int e, int s) {
+    for(int j=0;j<i.size();j++)
+        if(i[j] == e) i[j] = s;
+    return i;
+}
