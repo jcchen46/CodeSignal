@@ -1,0 +1,18 @@
+bool isSubstitutionCipher(std::string string1, std::string string2) {
+    if(string1.length() != string2.length())
+        return false;
+    vector<int> norm(26, -1);
+    vector<int> subs(26, -1);
+    
+    for(int m=0; m<string1.length(); m++){
+        if(norm[string1[m]-'a'] == -1 && subs[string2[m]-'a'] == -1){
+            norm[string1[m]-'a'] = string2[m]-'a';
+            subs[string2[m]-'a'] = string1[m]-'a';
+        }
+        else if(norm[string1[m]-'a'] != string2[m] - 'a' || subs[string2[m]-'a'] != string1[m] - 'a')
+            return false;
+    }
+    return true;
+    
+    
+}
