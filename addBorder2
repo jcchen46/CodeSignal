@@ -1,0 +1,6 @@
+vector<string> o, addBorder(vector<string> p) {
+    int r = p.size(),c = p[0].size();
+    string s(c + 2,'*');
+    for(int i = 0; i <= r + 1; i++) i == 0 || i == r + 1?o.push_back(s):o.push_back('*' + p[i - 1] + '*');
+    return o;
+}
