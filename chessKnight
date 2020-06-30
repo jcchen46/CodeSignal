@@ -1,0 +1,16 @@
+bool valid(int a, int b) {
+    return a >= 0 && a < 8 && b >= 0 && b < 8;
+}
+int chessKnight(std::string cell) {
+    int a = cell.front() - 'a', b = cell.back() - '1';
+    return
+        + valid(a - 2, b - 1)
+        + valid(a - 2, b + 1)
+        + valid(a + 2, b - 1)
+        + valid(a + 2, b + 1)
+        + valid(a - 1, b - 2)
+        + valid(a - 1, b + 2)
+        + valid(a + 1, b - 2)
+        + valid(a + 1, b + 2)
+    ;
+}
