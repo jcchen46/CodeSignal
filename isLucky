@@ -1,0 +1,17 @@
+bool isLucky(int n) {
+    string sn = to_string(n);
+    int len = sn.size();
+    int h1=0,h2=0;
+    for(int i = 0;i<len/2;i++){
+        h1 = h1 + (sn[i]-48);
+        h2 = h2 + (sn[len/2+i]-48);
+        
+        cout << h1 << endl << h2 << endl;
+    }
+    cout << h1 << endl << h2 << endl;
+    if(h1 == h2){
+        return 1;
+    }else{
+        return 0;
+    }
+}
