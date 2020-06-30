@@ -1,0 +1,5 @@
+int lateRide(int n) {
+    string h = to_string(n / 60);
+    string m = to_string(n % 60);
+    return h[0]%48 + h[1]%48 + m[0]%48 + m[1]%48;
+}
