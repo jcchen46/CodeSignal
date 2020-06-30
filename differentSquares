@@ -1,0 +1,7 @@
+int differentSquares(vector<vector<int>> m) {
+    set<int> se;
+    for(int i = 1; i < m.size(); ++i)
+        for(int j = 1; j < m[0].size(); ++j)
+            se.insert(m[i][j]+10*m[i-1][j]+100*m[i][j-1]+1000*m[i-1][j-1]);
+    return se.size();
+}
