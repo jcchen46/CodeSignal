@@ -1,0 +1,13 @@
+int timedReading(int l, string t) {
+    int c = 0;
+    if(!isalpha(t[0]))    return 0;
+    int ini = t.size();
+    while(t.size() >= 0 && t.size() <= ini){
+        int a = t.find_last_of(" ");
+        int b = t.find_last_of("qwertyuiopasdfghjklzxcvbnm");
+        cout << t.size() << endl;
+        if(b - a <= l)  c++;
+        t.erase(t.begin()+a,t.end());
+    }
+    return c;
+}
