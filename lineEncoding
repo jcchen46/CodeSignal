@@ -1,0 +1,7 @@
+string r, lineEncoding(string s) {
+    for (auto i = begin(s), j = i; i != end(s); i = j) {
+        while (*j == *i) ++j;
+        r.append(j-i>1 ? to_string(j-i) : ""s).push_back(*i);
+    }
+    return r;
+}
