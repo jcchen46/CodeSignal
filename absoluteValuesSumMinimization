@@ -1,0 +1,3 @@
+int absoluteValuesSumMinimization(std::vector<int> a) {
+    return a[(size(a)-1)/2];
+}
