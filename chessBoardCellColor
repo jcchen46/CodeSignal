@@ -1,0 +1,8 @@
+bool chessBoardCellColor(string c, string d) {
+    return (c[0]+c[1])%2 == (d[0]+d[1])%2;
+}
+/*
+bool chessBoardCellColor(string c, string d) {
+    
+}
+*/
