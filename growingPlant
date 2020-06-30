@@ -1,0 +1,8 @@
+int o = 1,growingPlant(int u, int d, int h) {
+    int t = u;
+    while(t < h){
+        t = t+u-d;
+        o++;
+    }
+    return o;
+}
