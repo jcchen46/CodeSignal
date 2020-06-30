@@ -1,0 +1,13 @@
+int o=0, phoneCall(int m1, int m2, int m11, int s) {
+    s = s-m1;
+    if(s >= 0)  o = o + 1;
+    else return 0;
+    cout << o << endl;
+    
+    s = s - 9*m2;
+    if(s >= 0)  o = o + 9;
+    else return o + floor((s+9*m2)/m2);
+    cout << o << endl;
+    
+    return o + floor(s/m11);
+}
