@@ -1,0 +1,13 @@
+vector<vector<int>> spiralNumbers(int n) {
+    vector<vector<int>> ans(n,vector<int>(n));
+    int cur = 1;
+    for(int c = 0; c < (n+1)/2; ++c)
+    {
+        for(int i = c; i < n-c-1; ++i)ans[c][i] = cur++;
+        for(int i = c; i < n-c-1; ++i)ans[i][n-c-1] = cur++;
+        for(int i = n-c-1; i > c; --i)ans[n-c-1][i] = cur++;
+        for(int i = n-c-1; i > c; --i)ans[i][c] = cur++;
+    }
+    if(n&1)ans[n/2][n/2] = n*n;
+    return ans;
+}
