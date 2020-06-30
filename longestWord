@@ -1,0 +1,7 @@
+std::string longestWord(std::string text) {
+    std::regex expr("[A-Za-z]+");
+    std::sregex_iterator it(text.begin(), text.end(), expr), end;
+    return std::max_element(it, end, [](const std::smatch& a, const std::smatch& b) {
+        return a.length() < b.length();
+    })->str();
+}
