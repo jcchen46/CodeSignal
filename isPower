@@ -1,0 +1,11 @@
+bool isPower(int n) {
+        if (n == 1)
+        return true;
+    if (n < 3)
+        return false;
+    for(int t = 2; t < n; ++t)
+        for(int p = t; p <= n; p *= t)
+            if (p == n)
+                return true;
+    return false;
+}
