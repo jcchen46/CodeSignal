@@ -1,0 +1,17 @@
+std::vector<std::vector<int>> minesweeper(std::vector<std::vector<bool>> m) {
+    vector<vector<int>> a(m.size(), vector<int>(m[0].size()));
+    for(int i = 0; i < a.size(); ++i)
+    {
+        for(int j = 0; j < a[0].size(); ++j)
+        {
+            for(int r = -1; r < 2; ++r)
+                for(int c = -1; c < 2; ++c)
+                {
+                    if(!(r|c))continue;
+                    if(i+r>=0 and i+r<a.size() and j+c>=0 and j+c<a[0].size() && m[i+r][j+c])
+                        ++a[i][j];
+                }
+        }
+    }
+    return a;
+}
