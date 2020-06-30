@@ -1,0 +1,7 @@
+bool isUnstablePair(string n1, string n2) {
+    std::string tn1, tn2;
+    std::transform(begin(n1), end(n1), std::back_inserter(tn1), ::tolower);
+    std::transform(begin(n2), end(n2), std::back_inserter(tn2), ::tolower);
+    
+    return (n1 < n2) != (tn1 < tn2);  
+}
