@@ -1,0 +1,10 @@
+bool isSmooth(vector<int> v) {
+    if(v[0] == v[v.size()-1]){
+        if(v.size()%2 == 0){
+            return (v[v.size()/2 - 1] + v[v.size()/2]) == v[0];
+        }else{
+            return v[v.size()/2] == v[0];
+        }
+    }
+    return 0;
+}
