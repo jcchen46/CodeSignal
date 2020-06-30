@@ -1,0 +1,8 @@
+string alphabeticShift(string s) {
+    for(char &c: s)
+        if(c=='z')
+            c='a';
+        else
+            ++c;
+    return s;
+}
