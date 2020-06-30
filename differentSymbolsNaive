@@ -1,0 +1,7 @@
+int differentSymbolsNaive(string s) {
+    string o;
+    for(char const &c: s){
+        if(o.find(c) == string::npos)   o.push_back(c);
+    }
+    return size(o);
+}
