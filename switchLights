@@ -1,0 +1,8 @@
+vector<int> switchLights(vector<int> a) {
+    int s = 0;
+    for (int i = a.size(); i--;) {
+        s ^= a[i];
+        a[i] ^= s;
+    }
+    return a;
+}
