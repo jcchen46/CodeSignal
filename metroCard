@@ -1,0 +1,9 @@
+vector<int> d,metroCard(int l) {
+    if(l == 30 || l == 28)     d.push_back(31);
+    if(l == 31){
+        d.push_back(28);
+        d.push_back(30);
+        d.push_back(31);
+    }
+    return d;
+}
