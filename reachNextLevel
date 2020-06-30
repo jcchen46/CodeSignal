@@ -1,0 +1,3 @@
+bool reachNextLevel(int ex, int t, int r) {
+    return ex+r >= t;
+}
