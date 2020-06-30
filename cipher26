@@ -1,0 +1,15 @@
+std::string cipher26(std::string m) {
+    auto sum = 0;
+    for (auto& c : m)
+    {
+        const auto decoded = (26 + (c - 'a') - sum) % 26;
+        sum = (sum + decoded) % 26;
+        c = decoded + 'a';
+    }
+    return m;
+}
+
+
+
+//              (t + x)/ 26 = n ......a
+//              a + 26 * n - t = x
