@@ -1,0 +1,11 @@
+std::vector<std::string> newNumeralSystem(char number) {
+    std::vector<std::string> r;
+    std::string s = "A + ";
+    s += number;
+    while (s[0] <= s[4]) {
+        r.push_back(s);
+        s[0]++;
+        s[4]--;
+    }
+    return r;
+}
