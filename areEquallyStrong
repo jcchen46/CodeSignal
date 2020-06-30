@@ -1,0 +1,17 @@
+bool areEquallyStrong(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
+    int y1 = yourLeft;
+    int y2 = yourRight;
+    int f1 = friendsLeft;
+    int f2 = friendsRight;
+    if((y1+y2) == (f1+f2)){
+        if(y1==f1&&y2==f2){
+            return 1;
+        }else if(y1==f2&&y2==f1){
+            return 1;
+        }else{
+            return 0;
+        }
+    }else{
+        return
+    }
+}
