@@ -1,0 +1,19 @@
+int digitDegree(int a) {
+    string n = to_string(a);
+    if(size(n) == 1) return 0;
+    else{
+        int t = 0;
+        while(n.length() != 1){
+            int m = 0;
+            for(int i = 0; i < n.length();i++){
+                m = m + (int)n.at(i);
+            }
+            m = (m-'0')%48;
+            cout << m << endl;
+            n = to_string(m);
+            t++;
+            cout << n << endl;
+        }
+        return t;
+    }
+}
