@@ -1,0 +1,8 @@
+int candles(int n, int m) {
+    int lo = n, o = n;
+    while(lo >= m){
+        o += lo/m;
+        lo = lo/m + lo%m;         
+    }
+    return o;
+}
