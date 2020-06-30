@@ -1,0 +1,17 @@
+int stringsConstruction(string a, string b) {
+    vector<int> buckets(26, 0);
+    for(auto c : b){
+        buckets[c-'a']++;
+    }
+    
+    int count = 0;
+    while(1){
+        for(auto c : a){
+            if(buckets[c-'a'] == 0)
+                return count;
+            buckets[c-'a']--;
+        }
+        count++;
+    }
+    return count;
+}
