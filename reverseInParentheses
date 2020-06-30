@@ -1,0 +1,38 @@
+std::string reverseInParentheses(std::string inputString) {
+    /*int b=0,e=0;
+    
+    for(int i=0;i<inputString.size();i++){
+        if(inputString[i] == '('){
+            b = i;
+            for(int j = i;j<inputString.size();j++){
+                if(inputString[j] == '(')   b = j;
+                if(inputString[j] == ')'){
+                    e = j;
+                    reverse(inputString.begin()+b+1,inputString.begin()+e);
+                    inputString.erase(inputString.begin()+e);
+                    inputString.erase(inputString.begin()+b);
+                }
+            }
+        }
+    }
+    cout << b << e << endl;
+    
+    return inputString;*/
+    string s = inputString;
+            stack<string> st;
+        string cur = "";
+        for (int i = 0; i < s.size(); ++ i) {            
+            if (s[i] == '(') {
+                st.push(cur);
+                cur = "";
+            } else if (s[i] == ')') {
+                std::reverse(begin(cur), end(cur));
+                string s = st.top();
+                st.pop();
+                cur = s + cur;
+            } else {
+                cur += s[i];
+            }
+        }
+        return cur;
+}
