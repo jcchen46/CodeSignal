@@ -1,0 +1,6 @@
+int arrayPacking(vector<int> a) {
+    int o=0;
+    for(int i = 0; i < a.size(); i++)
+        o += a[i] << (8*i);
+    return o;
+}
