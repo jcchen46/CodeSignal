@@ -1,0 +1,7 @@
+vector<int> firstReverseTry(vector<int> r) {
+    if(r.size() <= 1)   return r;
+    int t = r[0];
+    r[0] = r[r.size() - 1];
+    r[r.size() - 1] = t;
+    return r;
+}
