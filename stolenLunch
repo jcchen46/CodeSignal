@@ -1,0 +1,9 @@
+std::string stolenLunch(string n) {
+    for(auto &el: n){
+        if('a' <= el && el <= 'j')
+            el = (char)(el - 'a' + '0');
+        else if('0' <= el && el <= '9')
+            el = (char)(el - '0' + 'a');
+    }
+    return n;
+}
