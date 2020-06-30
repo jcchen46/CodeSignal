@@ -1,0 +1,14 @@
+int mostFrequentDigitSum(int n) {
+        std::map<int, int> m;
+    while (n) {
+        int s = 0;
+        for (int c = n; c; c /= 10) {
+            s += c % 10;
+        }
+        m[s]++;
+        n -= s;
+    }
+    return std::max_element(m.begin(), m.end(), [](const auto& l, const auto& r) {
+        return l.second != r.second ? l.second < r.second : l.first < r.first;
+    })->first;
+}
