@@ -1,0 +1,11 @@
+vector<vector<char>> drawRectangle(vector<vector<char>> canvas, vector<int> r) {
+    for(int i = r[1]; i <= r[3]; i++){
+        for(int j = r[0]; j <= r[2]; j++){
+            if(i == r[1] || i == r[3])   canvas[i][j] = '-';
+            if(j == r[0] || j == r[2])   canvas[i][j] = '|';
+        }
+    }
+    canvas[r[1]][r[0]] = '*';   canvas[r[3]][r[0]] = '*';
+    canvas[r[1]][r[2]] = '*';   canvas[r[3]][r[2]] = '*';
+    return canvas;
+}
