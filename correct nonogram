@@ -1,0 +1,24 @@
+bool correctNonogram(int s, std::vector<std::vector<std::string>> nonogramField) {
+    s = (s+1)/2;
+    for (const auto i : {0,1}) {
+        auto field = [&](int x, int y) {
+            return i ? nonogramField[y][x] : nonogramField[x][y]; };
+        for (int y = s; y < size(nonogramField); ++y) {
+            int f = s - 1;
+            for (int x = size(nonogramField)-1, a = 0; x >= s-1; --x)
+                if (field(y,x) == "#")
+                    ++a;
+                else if (a) {
+                    if (f < 0 || to_string(a) != field(y,f))
+                        return false;
+                    a = 0;
+                    --f;
+                }
+            
+            while (f >= 0)
+                if (field(y, f--) != "-")
+                    return false;
+        }
+    }
+    return true;
+}
