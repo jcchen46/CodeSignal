@@ -1,0 +1,20 @@
+int maximumSum(vector<int> a, vector<vector<int>> q) {
+    int o = 0;
+    map<int,int> map;
+    vector<int> num;
+    for(int i = 0; i < q.size(); i++){
+        for(int j = q[i][0]; j <= q[i][1]; j++){
+            map[j]++;
+        }
+    }
+    for(auto [x,y] : map){
+        num.push_back(y);
+    }
+    num.resize(a.size());
+    sort(num.begin(),num.end());
+    sort(a.begin(),a.end());
+    for(int z = 0; z < a.size(); z++){
+        o += a[z] * num[z];
+    }
+    return o;
+}
