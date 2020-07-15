@@ -1,0 +1,15 @@
+vector<string> sortByLength(vector<string> p) {
+    string t;
+    for(int i = 1; i < p.size(); i++){
+        t = p[i];
+        if(p[i-1].size() > p[i].size()){
+            int j = i - 1;
+            while(j >= 0 && p[j].size() > t.size()){
+                p[j+1] = p[j];
+                j--;
+            }
+            p[j + 1] = t;
+        }
+    }
+    return p;
+}
