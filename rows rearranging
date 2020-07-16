@@ -1,0 +1,23 @@
+bool rowsRearranging(vector<vector<int>> p) {
+    if(p.size() == 1)   return 1;
+    vector<int> t;
+    for(int i = 1; i < p.size(); i++){
+        t = p[i];
+        if(p[i-1][0] == p[i][0]) return 0;
+        if(p[i-1][0] > p[i][0]){
+            int j = i - 1;
+            while(j >= 0 && p[j][0] > t[0]){
+                p[j+1] = p[j];
+                j--;
+            }
+            p[j + 1] = t;
+        }
+    }
+    
+    for(int k = 1; k < p[0].size(); k++){
+        for(int l = 0; l < p.size() - 1; l++){
+            if(p[l][k] >= p[l+1][k]) return 0;
+        }
+    }
+    return 1;
+}
