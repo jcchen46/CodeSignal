@@ -1,0 +1,18 @@
+vector<vector<int>> blockStorageRewrites(int b, vector<vector<int>> w, int t) {
+    vector<vector<int>> o;
+    vector<int> s(b,0);
+    for(int i = 0; i < w.size(); i++){
+        for(int j = w[i][0]; j <= w[i][1]; j++){
+            s[j]++;
+        }
+    }
+    int x = -10;
+    for(int l = 0; l <= b; l++){
+        if(s[l] >= t && x == -10) x = l;
+        if(s[l] < t && x != -10){
+            o.push_back({x,l-1});
+            x = -10;
+        }
+    }
+    return o;
+}
