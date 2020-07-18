@@ -1,0 +1,6 @@
+vector<int> videoPart(string p, string t) {
+    int ps = 3600 * stoi(p.substr(0,2)) + 60 * stoi(p.substr(3,2)) + stoi(p.substr(6,2));
+    int ts = 3600 * stoi(t.substr(0,2)) + 60 * stoi(t.substr(3,2)) + stoi(t.substr(6,2));
+    int g = gcd(ps, ts);
+    return {ps/g,ts/g};   
+}
